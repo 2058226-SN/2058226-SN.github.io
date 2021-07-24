@@ -80,11 +80,6 @@ function card(player_card)
             var html_inputMessage = document.getElementById("inputMessage");
             html_inputMessage.innerHTML = message;
         }
-        else
-        {
-            message = "BETをしないでカードを引いたので、失格です。リロードしてBETをしてからカードを引いて下さい";
-            alert(message);
-        }
     }
     else if (player_card == 3) 
     {
@@ -196,5 +191,4 @@ function card(player_card)
         
     } 
 }
-
 
