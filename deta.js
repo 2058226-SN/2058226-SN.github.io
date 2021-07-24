@@ -80,6 +80,11 @@ function card(player_card)
             var html_inputMessage = document.getElementById("inputMessage");
             html_inputMessage.innerHTML = message;
         }
+        else
+        {
+            message = "BETをしないでカードを引いたので、失格です。リロードしてBETをしてからカードを引いて下さい";
+            alert(message);
+        }
     }
     else if (player_card == 3) 
     {
@@ -171,7 +176,7 @@ function card(player_card)
                     pointMessage = '0';
                 }
                 else if (VET == 2) {
-                    message = "引き分けです。あなたはTIEを選んだので、ポイントは";
+                    message = "引き分けです。しかしあなたはTIEを選んだので、ポイントは";
                     point = CP * 10;
                     console.log(point);
                     pointMessage = point;
@@ -191,4 +196,5 @@ function card(player_card)
         
     } 
 }
+
 
