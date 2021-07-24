@@ -171,7 +171,7 @@ function card(player_card)
                     pointMessage = '0';
                 }
                 else if (VET == 2) {
-                    message = "引き分けです。しかしあなたはTIEを選んだので、ポイントは";
+                    message = "引き分けです。あなたはTIEを選んだので、ポイントは";
                     point = CP * 10;
                     console.log(point);
                     pointMessage = point;
