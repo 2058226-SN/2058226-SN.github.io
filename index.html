@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/option.css">
+    <title>簡易カジノウォー</title>
+</head>
+
+<body>
+    <!-- タイトル -->
+    <h1>CASINO WAR</h1>
+
+    <!-- 説明 -->
+    <div>
+        <h2>ゲーム説明</h2>
+        <p>プレイヤーとディーラー（CP)の二人対決のトランプゲームです。</p>
+        <p>プレイヤーはANTIとTIE（引き分け）のどちらかに賭け、ANTIならカードの２倍、引き分けならカードの10倍のポイントがもらえます。</p>
+        <p>もし負けたり、賭けを外したらポイントは0です。</p>
+        <p>ベットが終了したら、Playerのカードボタン、Dealerのカードボタンを押して、カードを確認して下さい。
+        <p>
+        <p>カードはAが最強,次にK,Q,Jと順に弱くなり、2が最弱となります。</p>
+        <p>勝負は一回のみです。必ず上から順にボタンを押して下さい。</p>
+    </div>
+
+    <!-- 賭け -->
+    <div>
+        <div id="bet_box">
+            <h2>BET TIME</h2>
+            <button class="btn-circle-border-double" type="button" onclick="card(0); disabled = true;">ANTI</button>
+            <button class="btn-circle-border-double" type="button" onclick="card(1); disabled = true;">TIE</button>
+            <p id="BETinputMessage">あなたはどちらにかけますか？</p>
+            <script src="/deta.js"></script>
+        </div>
+        <!-- BOX -->
+        <div>
+            <!-- プレイヤーの箱 -->
+            <div id="player_box">
+                <p>Player</p>
+                <!-- カード表示 -->
+                <button type="button" onclick="card(2); disabled = true;">カード</button>
+                <p id="inputMessage">BET TIMEのボタンを押したら上のカードボタンを押して下さい</p>
+                <!-- サブ関数的なやつ -->
+                <script src="/deta.js"></script>
+            </div>
+            <!-- ディーラーの箱 -->
+            <div id="dealer_box">
+                <p>Dealer</p>
+                <!-- カード表示 -->
+                <button type="button" onclick="card(3); disabled = true;">ディーラーのカード</button>
+                <p id="DealerInputMessage">上のボタンが両方押されたら押して下さい</p>
+                <!-- サブ関数的なやつ -->
+                <script src="/deta.js"></script>
+            </div>
+            <!-- 結果 -->
+            <div id="result_box">
+                <p>Result</p>
+                <!-- カード表示 -->
+                <button type="button" onclick="card(4); disabled = true;">結果</button>
+                <p id="ResultInputMessage">勝者は...</p>
+                <p id="PointInputMessage">あなたのポイントは...</p>
+                <!-- サブ関数的なやつ -->
+                <script src="/deta.js"></script>
+            </div>
+
+
+</body>
+
+</html>
